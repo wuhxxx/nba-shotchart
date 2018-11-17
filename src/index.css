@@ -2,6 +2,7 @@
 @import "./styles/TopBar.css";
 @import "./styles//Main.css";
 @import "./styles/ShotChart.css";
+@import "./styles/Profile.css";
 
 body {
     margin: 0;
