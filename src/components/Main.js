@@ -10,7 +10,6 @@ export class Main extends Component {
     };
 
     componentDidMount() {
-        console.log(this.state.playerId);
         nba.stats
             .playerInfo({ PlayerID: this.state.playerId })
             .then(info => {
@@ -28,11 +27,7 @@ export class Main extends Component {
     render() {
         return (
             <div className="main">
-                {console.log(this.state)}
-                <Profile
-                    playerId={this.state.playerId}
-                    playerInfo={this.state.playerInfo}
-                />
+                <Profile playerInfo={this.state.playerInfo} />
                 <ShotChart playerId={this.state.playerId} />
             </div>
         );
