@@ -44,7 +44,7 @@ export class DataViewContainer extends React.Component {
                                 <CountSlider
                                     onMinCountChange={_.debounce(
                                         this.onMinCountChange,
-                                        500
+                                        100
                                     )}
                                     className="filter-control"
                                 />

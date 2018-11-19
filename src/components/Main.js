@@ -21,12 +21,19 @@ export class Main extends React.Component {
                 this.setState({ playerInfo });
             })
             .catch(e => console.log(e));
+
+        // const pid = nba.findPlayer("Rudy Gay").playerId;
+        // setTimeout(() => {
+        //     this.setState({ playerId: pid });
+        // }, 10000);
     }
 
     render() {
         return (
             <div className="main">
-                <Profile playerInfo={this.state.playerInfo} />
+                {this.state.playerInfo ? (
+                    <Profile playerInfo={this.state.playerInfo} />
+                ) : null}
                 <DataViewContainer playerId={this.state.playerId} />
             </div>
         );
