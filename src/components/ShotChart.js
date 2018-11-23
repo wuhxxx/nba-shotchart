@@ -15,19 +15,9 @@ export class ShotChart extends React.Component {
         displayTooltip: PropTypes.bool.isRequired
     };
 
-    constructor(props) {
-        super(props);
-        this.a = 123;
-        console.log("ShotChart constructor() " + this.a);
-    }
+    componentWillMount() {}
 
-    componentWillMount() {
-        console.log("ShotChart componentWillMount() " + this.a);
-    }
-
-    componentDidMount() {
-        console.log("ShotChart componentDidMount() " + this.a);
-    }
+    componentDidMount() {}
 
     componentDidUpdate() {
         console.log("ShotChart componentDidUpdate() " + this.a);
