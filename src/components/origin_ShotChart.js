@@ -20,7 +20,7 @@ export class ShotChart extends React.Component {
     componentDidMount() {}
 
     componentDidUpdate() {
-        console.log("ShotChart componentDidUpdate() " + this.a);
+        console.log("ShotChart componentDidUpdate() ");
         nba.stats
             .shots({
                 PlayerID: this.props.playerId,
@@ -48,7 +48,7 @@ export class ShotChart extends React.Component {
             });
     }
     render() {
-        console.log("ShotChart render() " + this.a);
+        console.log("ShotChart render() ");
         return <div id="shot-chart" />;
     }
 }
