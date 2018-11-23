@@ -24,6 +24,7 @@ export class ShotChart extends React.Component {
     }
 
     loadPlayerShotData = playerId => {
+        console.log("shotchart loadPlayerShotData");
         return nba.stats
             .shots({
                 PlayerID: playerId,
@@ -39,6 +40,7 @@ export class ShotChart extends React.Component {
                 }));
 
                 // debugger;
+                console.log("shotchart loadPlayerShotData done");
                 this.setState({ ShotData: final_shots, playerId });
             });
     };
@@ -86,6 +88,7 @@ export class ShotChart extends React.Component {
     }
 
     render() {
+        console.log("shotchart render");
         return <div id="shot-chart" />;
     }
 }
