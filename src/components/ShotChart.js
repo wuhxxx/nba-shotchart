@@ -24,7 +24,6 @@ export class ShotChart extends React.Component {
     }
 
     loadPlayerShotData = playerId => {
-        console.log("shotchart loadPlayerShotData");
         return nba.stats
             .shots({
                 PlayerID: playerId,
@@ -38,9 +37,6 @@ export class ShotChart extends React.Component {
                     shot_distance: shot.shotDistance,
                     shot_made_flag: shot.shotMadeFlag
                 }));
-
-                // debugger;
-                console.log("shotchart loadPlayerShotData done");
                 this.setState({ ShotData: final_shots, playerId });
             });
     };
@@ -60,26 +56,10 @@ export class ShotChart extends React.Component {
     };
 
     componentDidMount() {
-        console.log("shotchart did mount");
-        // debugger;
-        // console.log(this); // this component
-        // let self = this;
-        // let p = new Promise((res, rej) => {
-        //     res(0);
-        // });
-        // p.then(v => {
-        //     console.log("promise ->" + v); // 0
-        //     console.log("promise ->" + this); // ! undefined
-        //     console.log("promise ->" + self); // this component
-        //     return 0;
-        // });
-
         this.loadPlayerShotData(this.props.playerId);
     }
 
     componentDidUpdate() {
-        console.log("shotchart did update");
-        // debugger;
         if (this.props.playerId !== this.state.playerId) {
             this.loadPlayerShotData(this.props.playerId);
         } else {
@@ -88,7 +68,6 @@ export class ShotChart extends React.Component {
     }
 
     render() {
-        console.log("shotchart render");
         return <div id="shot-chart" />;
     }
 }
